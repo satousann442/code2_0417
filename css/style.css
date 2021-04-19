@@ -307,7 +307,7 @@ header h2{
 }
 
 .point-box{
-  width: 60%;
+  width: 40%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -347,7 +347,7 @@ header h2{
 }
 
 .point-box2{
-  width: 60%;
+  width: 40%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -387,7 +387,7 @@ header h2{
 }
 
 .point3-box{
-  width: 60%;
+  width: 40%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -427,7 +427,7 @@ header h2{
 }
 
 .point4-box{
-  width: 60%;
+  width: 40%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -556,11 +556,16 @@ header h2{
   justify-content: center;
   align-items: center;
   padding-top: 65px;;
+  text-align: center;
 }
 
-.col-info{
-  flex-basis: 33%;
+.row-info{
+padding-left: 80px;
 }
+
+/* .col-info{
+  flex-basis: 33%;
+} */
 
 .row-col__p1 {
   font-size:51px;
@@ -578,7 +583,7 @@ header h2{
   font-size:27px;
 }
 
-.info-20xx{
+.info-20xx {
   font-size: 28px;
   text-align: right;
   padding-right: 125px;
