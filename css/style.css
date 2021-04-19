@@ -4,12 +4,24 @@ body{
   font-family:"Han Sans JP";
 }
 
+.sp{
+  display: none;
+}
+
+@media screen and (max-width:576px){
+  .sp {
+  display: block;
+  }
+  .pc{
+    display: none;
+  }
+}
+
 header{
   background: url(../img/header-square.png)no-repeat top right;
   background-size:cover;
   height:100vh;
   display: flex;
-
 }
 
 header h1{
@@ -37,9 +49,48 @@ header h2{
   flex-basis: 30%;
 }
 
+@media screen and (max-width:576px){
+  header {
+  background:url(../img/parent-background.png) no-repeat top center;
+   flex-direction: column;
+   height: auto;
+  }
+
+/* h1画像カバーできない */
+
+  header h1{
+    /* background: url(../img/header-img_sp.png)no-repeat center;
+    background-size: cover; */
+    order:3;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  header h2{
+    font-size: 40px;
+    order:1;
+  }
+
+  .header-copy{
+    order:2;
+    height:50vh;
+  }
+
+  .row-header{
+    order:4;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* solution */
+
 .solution{
   background: #6D6D6D;
-  height: 403px;
+  height: auto;
 }
 
 .solution h2{
@@ -57,6 +108,21 @@ header h2{
   text-align: center;
   padding-bottom: 49px;
 }
+
+@media screen and (max-width:576px){
+  .solution h2{
+    font-size: 33px;
+  }
+
+  .solution h3{
+    font-size: 44px;
+    padding-bottom: 10px;
+  }
+}
+
+/* parent */
+
+/* 隙間ができている */
 
 .parent{
   background: url(../img/parent-background.png) no-repeat center;
@@ -76,9 +142,20 @@ header h2{
   line-height: 137px;
 }
 
-.row-parent__contents1{
-  padding-left: 135px;
+@media screen and (max-width:576px){
+  .parent h2{
+    font-size: 45px;
+    line-height: 65px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+  }
 }
+
+/* child */
+/* checkboxにorderがかからない */
+/* 途中のサイジングがうまくいかない */
 
 .child h2{
   padding-top: 76px;;
@@ -88,8 +165,13 @@ header h2{
   display: flex;
 }
 
+.row-col__contnts1{
+  /* width:100%; */
+  height: 10vh;
+}
+
 .row-col__contents3{
-  font-size: 95px;
+  font-size: 25px;
   font-weight: bold;
   color: #000000;
   padding-top: 56px;
@@ -97,6 +179,33 @@ header h2{
   line-height: 137px;
   text-align: right;
 }
+
+@media screen and (max-width:576px){
+  .child h2{
+    order:4;
+  }
+
+  .row-col__contnts1{
+    order:2;
+  }
+
+  .row-col__contents2{
+    order:3;
+  }
+
+  .row-col__contents3{
+    font-size: 45px;
+    line-height: 65px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    order:1;
+    padding-top: 0px;
+    padding-right: 0px;
+  }
+}
+
+/* reason */
 
 .reason{
   background-color:#6D6D6D;
@@ -118,6 +227,19 @@ header h2{
   padding-top: 20px;
   margin-left: 20px;
 }
+
+@media screen and (max-width:576px){
+  .reason{
+    flex-direction: column;
+  }
+
+  .reason h3{
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+/* method */
 
 .method{
   background-color: #33C6F4;
@@ -143,6 +265,17 @@ header h2{
   text-align: center;
 }
 
+@media screen and (max-width:576px){
+  .method h3 {
+    font-size: 60px;
+  }
+  .method h4{
+    font-size: 60px;
+  }
+}
+
+/* midasi */
+
 .midasi h2{
   color: #33C6F4;
   font-size: 62px;
@@ -154,6 +287,18 @@ header h2{
   padding-bottom: 40px;
 }
 
+@media screen and (max-width:576px){
+  .midasi h2{
+    font-size: 58px;
+    text-align: center;
+  }
+}
+
+/* point */
+/* absoluteを2回できない？ */
+/* レスポンシブできない */
+/* 画像サイズが収まらない */
+
 .point-1{
   background: url(../img/point_bg1.png) no-repeat center;
   background-size: cover;
@@ -162,7 +307,7 @@ header h2{
 }
 
 .point-box{
-  width: 664px;
+  width: 60%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -202,7 +347,7 @@ header h2{
 }
 
 .point-box2{
-  width: 644px;
+  width: 60%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -242,7 +387,7 @@ header h2{
 }
 
 .point3-box{
-  width: 664px;
+  width: 60%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -282,7 +427,7 @@ header h2{
 }
 
 .point4-box{
-  width: 644px;
+  width: 60%;
   border:solid 1px #33C6F4;
   background-color: #33C6F4;
   position: absolute;
@@ -313,6 +458,96 @@ header h2{
   padding-left: 40px;
   padding-bottom: 79px;
 }
+
+@media screen and (max-width:576px){
+
+  .point-1{
+    background:url();
+    height:90vh;
+  }
+
+  .point-box{
+    top: 20px;
+    left: -0px;
+    width:100%;
+    height:80vh;
+  }
+
+  .point-box h2{
+    font-size: 100px;
+  }
+
+  .point-box h3{
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .point-2{
+    background:url();
+    height:90vh;
+  }
+
+  .point-box2{
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:80vh;
+  }
+
+  .point-box2 h2{
+    font-size: 100px;
+  }
+
+  .point-box2 h3{
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .point-3{
+    background:url();
+    height:90vh;
+  }
+
+  .point3-box{
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:80vh;
+  }
+
+  .point3-box h2{
+    font-size: 100px;
+  }
+
+  .point3-box h3{
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .point-4{
+    background:url();
+    height:90vh;
+  }
+
+  .point4-box{
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:80vh;
+  }
+
+  .point4-box h2{
+    font-size: 100px;
+  }
+
+  .point4-box h3{
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+}
+
+/* info */
 
 .info h2{
   font-size:80px;
@@ -349,6 +584,45 @@ header h2{
   padding-right: 125px;
 }
 
+@media screen and (max-width:576px){
+
+  .row-info{
+    flex-direction: column;
+  }
+
+  .info h2{
+    font-size:18px;
+    padding-top: 0px;
+    text-align: center;
+  }
+
+  .row-col__p1 {
+    font-size:40px;
+    padding-left: 15px;
+  }
+
+  .col-info img{
+    padding-left: 20px;
+  }
+
+  .row-col__p2{
+    font-size: 25px;
+    padding-left: 25px;
+    padding-top: 32px;
+  }
+
+  .row-col__p3{
+    padding-left: 20px;
+  }
+}
+
+.info-20xx{
+  text-align: center;
+  padding-right: 0px;
+}
+
+/* qa */
+
 .qa{
   background-color: #33C6F4;
   padding-bottom: 84px;
@@ -377,6 +651,30 @@ header h2{
   font-size: 26px;
 }
 
+@media screen and (max-width:576px){
+
+  .qa{
+    background-color:none;
+    padding-bottom: 0px;
+  }
+
+  .qa h2{
+    font-size: 50px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+
+  .col-qa{
+    padding-left: 25px;
+  }
+
+  .col-qa__contents{
+    font-size: 30px;
+  }
+}
+
+/* footer */
+
 footer h2{
   font-size: 61px;
   font-weight: bold;
@@ -393,5 +691,16 @@ footer h3{
 
 footer p{
   font-size: 26px;
-text-align: center;
+  text-align: center;
+}
+
+@media screen and (max-width:576px){
+  footer h2{
+    font-size: 30px;
+    padding-left: 10px;
+  }
+
+  footer h3{
+    font-size: 30px;
+  }
 }
