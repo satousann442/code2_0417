@@ -4,7 +4,7 @@ body{
   font-family:"Han Sans JP";
 }
 
-.sp{
+/* .sp{
   display: none;
 }
 
@@ -15,43 +15,36 @@ body{
   .pc{
     display: none;
   }
-}
+} */
 
 header{
-  background: url(../img/header-square.png)no-repeat top right;
-  background-size:cover;
-  display: flex;
+  background: url(../img/header-image8.png)no-repeat top left;
+  background-size:contain;
   height:auto;
+  background-color: #00bfff;
+  flex-basis:50%;
 }
 
 header h1{
-  width:100%;
-  height:auto;
-  flex-basis: 50%;
-}
-
-.header-contents{
-  flex-basis: 50%;
-}
-
-header h2{
   font-size: 3vw;
-  text-align:center;
+  text-align:right;
   padding-top: 20px;
   color: #FFFFFF;
   font-weight: bold;
+  flex-basis:50%;
+  padding-right: 30px;
 }
 
-.header-copy{
-  text-align:center;
-  width:60%;
-  margin: 0 auto;
+header h2 {
+  width: 40%;
+  margin:0 0 0 auto;
+  padding-right: 10px;
 }
 
 .row-header{
-  text-align:center;
-  width:80%;
-  margin: 0 auto;
+  width:50%;
+  margin:0 0 0 auto;
+  padding-bottom: 20px;
 }
 
 .row-header__contents{
@@ -60,38 +53,29 @@ header h2{
 
 @media screen and (max-width:576px){
   header {
-  background:url(../img/parent-background.png) no-repeat top center;
-   flex-direction: column;
-   height: auto;
+    order:4;
+  background:url("");
+  background-color: #00bfff;
   }
 
-/* h1画像カバーできない */
-
   header h1{
-    /* background: url(../img/header-img_sp.png)no-repeat center;
-    background-size: cover; */
-    order:3;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
+    order:0;
+    font-size:6vw;
+    text-align: center;
     padding-top: 10px;
   }
 
   header h2{
-    font-size: 40px;
+    width: 80%;
+    margin:0 auto;
     order:1;
   }
 
-  .header-copy{
-    order:2;
-    height:50vh;
-  }
-
   .row-header{
-    order:4;
-    display: flex;
-    justify-content: center;
+    order:2;
+    width:80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
   }
 }
 
